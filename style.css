@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#start-screen h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+#start-screen p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#bin-icon {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+#bin-icon:hover {
+    transform: scale(1.025);
+}
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: flex;
+}
+
+#webcam-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#webcam-container canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#scan-text {
+    font-size: 8rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#scan-confidence {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#analyze-screen {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+#bin-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+#result-name {
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+
+#result-decomposition, #result-bin {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#countdown {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 1rem;
+    color: white;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #ddd;
+}

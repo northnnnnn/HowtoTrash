@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <body>
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active">
+                <h1>HOW TO TRASH?</h1>
+                <p>ทิ้งขยะยังไงให้ถูกต้อง</p>
+                <img id="bin-icon" src="./images/start_button.png" style="height: 350px; width: auto; margin-top: 2rem;" alt="ถังขยะ" onclick="startScan()">
+            </div>
+        
+            <!-- Scan Screen -->
+            <div id="scan-screen" class="screen hidden">
+                <div id="webcam-container"></div>
+                <div id="scan-text">ถือสิ่งที่ต้องการวิเคราะห์</div>
+                <p id="scan-confidence"></p>
+            </div>
+            
+        
+            <!-- Analyze Screen -->
+            <div id="analyze-screen" class="screen hidden">
+                <div id="bin-container" style="text-align: center;">
+                    <img id="bin-icon2" src="" alt="ถังขยะ" style="height: 350px; width: auto; margin-bottom: 1rem;">
+                </div>
+                <h2 id="result-name" style="font-size: 4rem; font-weight: bold; color: white;">ชื่อขยะ</h2>
+                <p id="result-decomposition" style="font-size: 1.2rem; color: white;">ใช้เวลาในการย่อยสลาย: ...</p>
+                <p id="result-bin" style="font-size: 1.2rem; font-weight: bold; color: white;">...</p>
+                <button onclick="goToStart()" style="margin-top: 2rem; padding: 0.5rem 1rem; font-size: 1.2rem;">กลับ</button>
+                <p id="countdown" style="font-size: 0.8rem; opacity: 0.6; color: white;">กลับไปเริ่มใน 20 วินาที</p>
+            </div>            
+        </body>         
+    </body>
+</html>
