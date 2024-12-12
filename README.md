@@ -6,3 +6,6 @@
 - Analyze trash using any webcam
 - Identify the type of trash
 - Provide suggestions for proper disposal
+
+# Demo
+https://how-to-trash-puyyarphath-wilos-projects.vercel.app/
